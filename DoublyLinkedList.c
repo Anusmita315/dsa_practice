@@ -10,7 +10,7 @@ struct Node {
     struct Node* next;
 };
 
-// Create a new node
+//1. Create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -18,7 +18,7 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-//1. Display list
+//2. Display list
 void display(struct Node* head) {
     struct Node* temp = head;
     if (temp == NULL) {
@@ -33,7 +33,7 @@ void display(struct Node* head) {
     printf("NULL\n");
 }
 
-//2. Insert at beginning
+//3. Insert at beginning
 struct Node* insertBeginning(struct Node* head, int data) {
     struct Node* newNode = createNode(data);
     if (head == NULL)
@@ -44,7 +44,7 @@ struct Node* insertBeginning(struct Node* head, int data) {
     return newNode;
 }
 
-//3. Insert at end
+//4. Insert at end
 struct Node* insertEnd(struct Node* head, int data) {
     struct Node* newNode = createNode(data);
     if (head == NULL)
@@ -59,7 +59,7 @@ struct Node* insertEnd(struct Node* head, int data) {
     return head;
 }
 
-//4. Insert after a given data
+//5. Insert after a given data
 struct Node* insertAfter(struct Node* head, int key, int data) {
     struct Node* temp = head;
     while (temp != NULL && temp->data != key)
@@ -81,7 +81,7 @@ struct Node* insertAfter(struct Node* head, int key, int data) {
     return head;
 }
 
-//5. Delete at beginning
+//6. Delete at beginning
 struct Node* deleteBeginning(struct Node* head) {
     if (head == NULL) {
         printf("List is empty.\n");
@@ -96,7 +96,7 @@ struct Node* deleteBeginning(struct Node* head) {
     return head;
 }
 
-//6. Delete at end
+//7. Delete at end
 struct Node* deleteEnd(struct Node* head) {
     if (head == NULL) {
         printf("List is empty.\n");
@@ -117,7 +117,7 @@ struct Node* deleteEnd(struct Node* head) {
     return head;
 }
 
-//7. Delete node with specific value
+//8. Delete node with specific value
 struct Node* deleteByValue(struct Node* head, int key) {
     struct Node* temp = head;
 
@@ -141,7 +141,7 @@ struct Node* deleteByValue(struct Node* head, int key) {
     return head;
 }
 
-//8. Delete entire list
+//9. Delete entire list
 struct Node* deleteList(struct Node* head) {
     struct Node* temp;
     while (head != NULL) {
@@ -152,7 +152,7 @@ struct Node* deleteList(struct Node* head) {
     return NULL;
 }
 
-//9. Main menu-driven program
+//10. Main menu-driven program
 int main() {
     struct Node* head = NULL;
     int choice, data, key;
