@@ -3,7 +3,7 @@
 
 int stack[SIZE];
 int top = -1;
-// Push Operation
+//1. Push Operation
 void push(int value) {
     if (top == SIZE - 1) {
         printf("Stack Overflow! Cannot push.\n");
@@ -13,7 +13,7 @@ void push(int value) {
         printf("%d pushed onto the stack.\n", value);
     }
 }
-// Pop Operation
+//2. Pop Operation
 void pop() {
     if (top == -1) {
         printf("Stack Underflow! Cannot pop.\n");
@@ -22,7 +22,7 @@ void pop() {
         top--;
     }
 }
-// Peek Operation
+//3. Peek Operation
 void peek() {
     if (top == -1) {
         printf("Stack is empty. No top element.\n");
@@ -30,7 +30,7 @@ void peek() {
         printf("Top element: %d\n", stack[top]);
     }
 }
-// void display() {
+//4. void display() {
     if (top == -1) {
         printf("Stack is empty.\n");
     } else {
@@ -40,7 +40,7 @@ void peek() {
         }
     }
 }
-// Menu-Driven Main Function
+//5. Menu-Driven Main Function
 int main() {
     int choice, value;
 
