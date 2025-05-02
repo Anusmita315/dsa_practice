@@ -201,7 +201,7 @@ struct Node* deleteList(struct Node* head) {
     return NULL;
 }
 
-// Main function with menu
+//9: Main function with menu
 int main() {
     struct Node* head = NULL;
     int choice, data, value;
