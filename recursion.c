@@ -89,3 +89,20 @@ int main() {
     funcA(10);
     return 0;
 }
+// 7.Nested Recursion
+#include <stdio.h>
+
+int nestedRecursion(int n) {
+    if (n <= 0) {
+        return 0;  // Base case
+    } else {
+        return n + nestedRecursion(nestedRecursion(n - 1));  // Nested recursive calls
+    }
+}
+
+int main() {
+    int result = nestedRecursion(5);
+    printf("Result: %d\n", result);  // Expected output will be the sum
+    return 0;
+}
+
